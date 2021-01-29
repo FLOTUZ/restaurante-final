@@ -18,6 +18,8 @@ let menu = [
   { nombre: "Asada", tPreparacion: 3 },
   { nombre: "Chilaquiles", tPreparacion: 3 },
 ];
+
+//Variables que se muestran en el frontend
 let ordenesAtendidas = 0;
 
 export default function App() {
@@ -27,6 +29,7 @@ export default function App() {
         <div className="row">
           <div className="col-2">
             <div>
+              <div id="varsEntrada"></div>
               <h2>Entrada</h2>
             </div>
             <div id="entrada" className="container">
@@ -38,7 +41,8 @@ export default function App() {
               <h2>Lobby</h2>
             </div>
             <div className="container">
-              <div id="lobby" className="row row-cols-2"></div>
+              <div id="lobby" className="row row-cols-2">
+              </div>
             </div>
           </div>
           <div className="col-4">
@@ -83,6 +87,9 @@ function darMesaAComensal() {
     capacidadLobby--;
     console.log({ entrada: entrada.size() });
     console.log(`${candidatoAMesa.nombre} ha tomado una mesa`);
+
+    //Se refresca el numero de comensales
+    document.getElementById('varsEntrada').innerHTML = `<h2> ${entrada.size()} en </h2>`;
 
     //Se pinta al comensal sentado en la mesa
     pintarComensalSentado();
@@ -132,37 +139,35 @@ async function nuevaOrden(comensal) {
 function pintarFila() {
   document.getElementById("entrada").innerHTML = "";
   for (let i = 0; i < entrada.size(); i++) {
+    let nombre = entrada.print()[i].nombre;
     document.getElementById(
       "entrada"
-    ).innerHTML += `<div className="comensal row-sm-auto">${
-      entrada.print()[i].nombre
-    }</div>`;
+    ).innerHTML += `<div className="comensal row-sm-auto">${nombre}</div>`;
   }
 }
 
 function pintarComensalSentado() {
   document.getElementById("lobby").innerHTML = "";
   for (let i = 0; i < lobby.size(); i++) {
+    let comensal = lobby.print()[i].nombre;
     document.getElementById(
       "lobby"
-    ).innerHTML += `<div className="mesa col-sm-6">${
-      lobby.print()[i].nombre
-    }</div>`;
+    ).innerHTML += `<div className="mesa col-sm-6">${comensal}</div>`;
   }
 }
 function pintarPlatillosEnCocina() {
   document.getElementById("cocinas").innerHTML = "";
   for (let i = 0; i < cocina.size(); i++) {
+    let nombrePlatillo = cocina.print()[i].platillo.nombre;
+    let nombreComensal = cocina.print()[i].nombre;
     document.getElementById(
       "cocinas"
-    ).innerHTML += `<div className="orden row">${
-      cocina.print()[i].platillo.nombre
-    } para ${cocina.print()[i].nombre}</div>`;
+    ).innerHTML += `<div className="orden row">${nombrePlatillo} para ${nombreComensal}</div>`;
   }
 
   document.getElementById(
     "ordenes"
-  ).innerHTML = `<div id="ordenes"> # Atendidos ${ordenesAtendidas} Ordenes ${cocina.size()} </div>`;
+  ).innerHTML = `<h2> # Atendidos ${ordenesAtendidas} Ordenes ${cocina.size()} </h2>`;
 }
 // sleep time expects milliseconds
 function sleep(time) {
