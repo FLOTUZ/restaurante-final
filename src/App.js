@@ -26,17 +26,12 @@ export default function App() {
       <div className="container">
         <div className="row">
           <div className="col-2">
-<<<<<<< HEAD
             <div>
               <h2>Entrada</h2>
             </div>
             <div id="entrada" className="container">
               <div className="comensal row-sm-auto"></div>
             </div>
-=======
-            <div id="door"><h2>Entrada</h2></div>
-            <div id="entrada" className="container"></div>
->>>>>>> dev
           </div>
           <div className="col-6">
             <div>
