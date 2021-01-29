@@ -57,3 +57,58 @@
 	text-align:center;
 	box-shadow: 2px 2px 3px #999;
 }
+.row{
+  padding-top: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-color: rgb(255, 255, 255);
+}
+.container{
+  border-radius: 25px;
+  background-color: rgba(75, 11, 0, 0.986);
+  color:#ffffff;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+}
+h2{
+  color:#ffffff;
+   text-shadow: 
+  2px 2px 2px rgb(148, 148, 148);
+  font-size: 150%;
+  letter-spacing: 10px ;
+  text-align:center;   
+}
+#entrada{
+  border-radius: 25px;
+  background-color: rgba(243, 166, 152, 0.986);
+  width: 200px;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+
+}
+#lobby{ padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  border-radius: 25px;
+
+  background-color: rgb(228, 181, 137);
+ 
+}
+#ordenes{
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  border-radius: 25px;
+ 
+  
+}
+#cocinas{
+  background-color: rgba(102, 195, 164, 0.774);
+  color:#ffffff;
+}

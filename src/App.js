@@ -24,17 +24,17 @@ export default function App() {
       <div className="container">
         <div className="row">
           <div className="col-2">
-            <div>Entrada</div>
+            <div><h2>Entrada</h2></div>
             <div id="entrada" className="container"></div>
           </div>
           <div className="col-6">
-            <div>Lobby</div>
+            <div><h2>Lobby</h2></div>
             <div className="container">
               <div id="lobby" className="row row-cols-2"></div>
             </div>
           </div>
           <div className="col-4">
-            <div id="ordenes">Ordenes</div>
+            <div id="ordenes"><h2>Ordenes</h2></div>
             <div id="cocinas" className="container"></div>
           </div>
         </div>
@@ -63,7 +63,6 @@ function main() {
   pintarFila();
 
   darMesaAComensal();
-  alert("Se cerró el restautante");
 }
 function darMesaAComensal() {
   while (capacidadLobby !== 0 && !entrada.isEmpty()) {
