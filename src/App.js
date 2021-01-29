@@ -26,7 +26,7 @@ export default function App() {
       <div className="container">
         <div className="row">
           <div className="col-2">
-            <div><h2>Entrada</h2></div>
+            <div id="door"><h2>Entrada</h2></div>
             <div id="entrada" className="container"></div>
           </div>
           <div className="col-6">
