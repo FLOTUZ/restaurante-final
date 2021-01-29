@@ -26,28 +26,62 @@ export default function App() {
       <div className="container">
         <div className="row">
           <div className="col-2">
-            <div id="door"><h2>Entrada</h2></div>
-            <div id="entrada" className="container"></div>
+            <div>
+              <h2>Entrada</h2>
+            </div>
+            <div className="container">
+              <div id="entrada" className="comensal row-sm-auto"></div>
+            </div>
           </div>
+
           <div className="col-6">
-            <div><h2>Lobby</h2></div>
+            <div>
+              <h2>Lobby</h2>
+            </div>
             <div className="container">
               <div id="lobby" className="row row-cols-2"></div>
             </div>
           </div>
+
           <div className="col-4">
-            <div id="ordenes"><h2>Ordenes</h2></div>
-            <div id="cocinas" className="container"></div>
+            <div id="ordenes">
+              <h2>Ordenes</h2>
+            </div>
+            <div className="container">
+              <div id="cocinas" className="ordenes row-sm-auto"></div>
+            </div>
           </div>
+        </div>
+      </div>
+
+      <div className="float-container">
+        <h3>Configuracion</h3>
+        <div className="container-input">
+          <input
+            type="number"
+            min="1"
+            max="20"
+            placeholder="Number people"
+            class="form-control"
+          ></input>
+
+          <input
+            type="number"
+            min="1"
+            max="5"
+            placeholder="Capacity lobby"
+            class="form-control"
+          ></input>
         </div>
       </div>
       <div
         className="float"
-        onClick={() => {main()}}
+        onClick={() => {
+          main();
+        }}
       >
-      <p className="float-text noselect">Iniciar</p>
+        <p className="float-text noselect">Iniciar</p>
       </div>
-      <div className="float-container">Hola</div>
     </>
   );
 }
@@ -96,7 +130,6 @@ async function comensalComiendo(comensal) {
   console.log(`El comensal ${comensal.nombre} ha teminado de comer`);
   lobby.dequeue();
   pintarComensalSentado();
-  pintarPlatillosEnCocina();
   capacidadLobby++;
   darMesaAComensal();
 }
@@ -114,7 +147,7 @@ async function nuevaOrden(comensal) {
   );
   pintarPlatillosEnCocina();
   ordenesAtendidas++;
-  
+
   //Se quita el primer elemento de la cola
   cocina.dequeue();
 }
@@ -161,6 +194,6 @@ function sleep(time) {
 
 // Usage!
 async function time(t) {
-  t = t * 100;
+  t = t * 1000;
   await sleep(t).then(() => {});
 }
