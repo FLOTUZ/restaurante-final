@@ -2,13 +2,15 @@ import "./App.css";
 const faker = require("faker");
 const simpleQueue = require("./Queue");
 
+faker.locale = "fr";
+
 const lobby = new simpleQueue();
 const cocina = new simpleQueue();
 const entrada = new simpleQueue();
 
 //Variables de restaurante
-let numClientes = 7;
-let capacidadLobby = 3; //Capacidad del restaurante
+let numClientes = 20;
+let capacidadLobby = 2; //Capacidad del restaurante
 
 let menu = [
   { nombre: "Tacos", tPreparacion: 3 },
@@ -111,9 +113,7 @@ async function nuevaOrden(comensal) {
   );
   pintarPlatillosEnCocina();
   ordenesAtendidas++;
-  document.getElementById(
-    "ordenes"
-  ).innerHTML = `<div id="ordenes"> # Atendidos ${ordenesAtendidas} Ordenes ${cocina.size()} </div>`;
+  
   //Se quita el primer elemento de la cola
   cocina.dequeue();
 }
@@ -148,6 +148,10 @@ function pintarPlatillosEnCocina() {
       cocina.print()[i].platillo.nombre
     } para ${cocina.print()[i].nombre}</div>`;
   }
+
+  document.getElementById(
+    "ordenes"
+  ).innerHTML = `<div id="ordenes"> # Atendidos ${ordenesAtendidas} Ordenes ${cocina.size()} </div>`;
 }
 // sleep time expects milliseconds
 function sleep(time) {
