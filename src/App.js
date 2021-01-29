@@ -96,6 +96,7 @@ async function comensalComiendo(comensal) {
   console.log(`El comensal ${comensal.nombre} ha teminado de comer`);
   lobby.dequeue();
   pintarComensalSentado();
+  pintarPlatillosEnCocina();
   capacidadLobby++;
   darMesaAComensal();
 }
@@ -160,6 +161,6 @@ function sleep(time) {
 
 // Usage!
 async function time(t) {
-  t = t * 1000;
+  t = t * 100;
   await sleep(t).then(() => {});
 }
