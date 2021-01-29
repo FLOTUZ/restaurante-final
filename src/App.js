@@ -26,26 +26,36 @@ export default function App() {
       <div className="container">
         <div className="row">
           <div className="col-2">
-            <div><h2>Entrada</h2></div>
-            <div id="entrada" className="container"></div>
+            <div>
+              <h2>Entrada</h2>
+            </div>
+            <div id="entrada" className="container">
+              <div className="comensal row-sm-auto"></div>
+            </div>
           </div>
           <div className="col-6">
-            <div><h2>Lobby</h2></div>
+            <div>
+              <h2>Lobby</h2>
+            </div>
             <div className="container">
               <div id="lobby" className="row row-cols-2"></div>
             </div>
           </div>
           <div className="col-4">
-            <div id="ordenes"><h2>Ordenes</h2></div>
+            <div id="ordenes">
+              <h2>Ordenes</h2>
+            </div>
             <div id="cocinas" className="container"></div>
           </div>
         </div>
       </div>
       <div
         className="float"
-        onClick={() => {main()}}
+        onClick={() => {
+          main();
+        }}
       >
-      <p className="float-text noselect">Iniciar</p>
+        <p className="float-text noselect">Iniciar</p>
       </div>
       <div className="float-container">Hola</div>
     </>
@@ -114,7 +124,7 @@ async function nuevaOrden(comensal) {
   );
   pintarPlatillosEnCocina();
   ordenesAtendidas++;
-  
+
   //Se quita el primer elemento de la cola
   cocina.dequeue();
 }

@@ -113,3 +113,8 @@ h2 {
   background-color: rgba(102, 195, 164, 0.774);
   color: #ffffff;
 }
+
+.people{
+  height: auto;
+  width: 80px;
+}
