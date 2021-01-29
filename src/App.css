@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 
+=======
+* {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(0, 0, 0);
+  text-align: center;
+}
+>>>>>>> dev
 
 .float {
   position: fixed;
@@ -90,11 +99,14 @@ input{
   padding-left: 2%;
   padding-right: 2%;
   padding-bottom: 2%;
+<<<<<<< HEAD
   border-style: solid;
   border-width: 5px;
   border-color: rgb(255, 255, 255);
   text-align: center;
  
+=======
+>>>>>>> dev
 }
 
 h2 {
@@ -115,7 +127,6 @@ h2 {
   padding-left: 2%;
   padding-right: 2%;
   padding-bottom: 2%;
-
 }
 #lobby {
   padding-top: 2%;
@@ -124,14 +135,51 @@ h2 {
   padding-bottom: 2%;
   border-radius: 25px;
   background-color: rgb(228, 181, 137);
-  
 }
 #cocinas {
   background-color: rgba(102, 195, 164, 0.774);
   color: #ffffff;
+<<<<<<< HEAD
+=======
+}
+
+#door {
   padding-top: 2%;
   padding-left: 2%;
   padding-right: 2%;
   padding-bottom: 2%;
   border-radius: 25px;
 }
+
+#ordenes {
+>>>>>>> dev
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  border-radius: 25px;
+}
+<<<<<<< HEAD
+=======
+
+.col-2 {
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  border-radius: 25px;
+}
+
+.people {
+  height: auto;
+  width: 80px;
+}
+
+.mesa {
+  height: 150px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(0 0 0);
+  text-align: center;
+}
+>>>>>>> dev
