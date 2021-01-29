@@ -1,7 +1,5 @@
 * {
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
+ 
   text-align: center;
 }
 
@@ -46,69 +44,72 @@
 }
 
 .float-container {
-  position:fixed;
-	width:60px;
-	height:60px;
-	bottom:40px;
-	right:100px;
-	background-color:#0C9;
-	color:#FFF;
-	border-radius:10px;
-	text-align:center;
-	box-shadow: 2px 2px 3px #999;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 100px;
+  background-color: #0c9;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
 }
-.row{
+.row {
   padding-top: 5%;
   padding-left: 2%;
   padding-right: 2%;
   border-color: rgb(255, 255, 255);
 }
-.container{
+.container {
   border-radius: 25px;
   background-color: rgba(75, 11, 0, 0.986);
-  color:#ffffff;
+  color: #ffffff;
   padding-top: 2%;
   padding-left: 2%;
   padding-right: 2%;
   padding-bottom: 2%;
+ 
 }
-h2{
-  color:#ffffff;
-   text-shadow: 
-  2px 2px 2px rgb(148, 148, 148);
+
+div{
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgba(70, 0, 0, 0);
+}
+
+h2 {
+  color: #ffffff;
+  text-shadow: 2px 2px 2px rgb(148, 148, 148);
   font-size: 150%;
-  letter-spacing: 10px ;
-  text-align:center;   
+  letter-spacing: 10px;
+  text-align: center;
 }
-#entrada{
+#entrada {
   border-radius: 25px;
   background-color: rgba(243, 166, 152, 0.986);
-  width: 200px;
   padding-top: 2%;
   padding-left: 2%;
   padding-right: 2%;
   padding-bottom: 2%;
 
 }
-#lobby{ padding-top: 2%;
+#lobby {
+  padding-top: 2%;
   padding-left: 2%;
   padding-right: 2%;
   padding-bottom: 2%;
   border-radius: 25px;
-
   background-color: rgb(228, 181, 137);
- 
 }
-#ordenes{
+#ordenes {
   padding-top: 2%;
   padding-left: 2%;
   padding-right: 2%;
   padding-bottom: 2%;
   border-radius: 25px;
- 
-  
 }
-#cocinas{
+#cocinas {
   background-color: rgba(102, 195, 164, 0.774);
-  color:#ffffff;
+  color: #ffffff;
 }
